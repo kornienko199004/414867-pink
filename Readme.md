@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алексей Корниенко](https://up.htmlacademy.ru/adaptive/12/user/414867).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Распономарев](https://up.htmlacademy.ru/adaptive/12/user/64492).
 
 ---
 
