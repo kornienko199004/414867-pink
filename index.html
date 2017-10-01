@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
-          <img class="page-header__logo-image" src="http://placehold.it/150x100"  alt="PINK">
+          <img class="page-header__logo-image" src="http://placehold.it/150x66"  alt="PINK">
         </a>
         <nav class="main-nav">
           <ul class="main-nav__list site-list">
@@ -26,14 +27,14 @@
             </li>
           </ul>
         </nav>
+        <p class="page-header__description visually-hidden">
+          Взгляните на жизнь иначе!
+        </p>
       </div>
-      <div class="page-header__wrapper">
+      <div class="page-header__wrapper  page-header__wrapper--top">
         <img class="page-header__image" src="http://placehold.it/320x314" alt="Розовый фильтр">
       </div>
-      <p class="page-header__description">
-        Взгляните на жизнь иначе!
-      </p>
-      <div class="page-header__wrapper">
+      <div class="page-header__wrapper page-header__wrapper--bottom">
         <a class="button" href="#">Скачать приложение</a>
         <div class="platforms">
           <a class="platforms__item" href="#">
@@ -58,36 +59,36 @@
       <h1 class="visually-hidden">Приложение &laquo;Pink&raquo;</h1>
       <section class="information">
         <h2 class="visually-hidden">Описание приложения &laquo;Pink&raquo;</h2>
-        <p class="information__description">
+        <p class="information__title">
           Устали от серости мегаполиса?
         </p>
-        <p class="information__description">
+        <p class="information__title">
           Нам есть, что вам предложить!
         </p>
-        <ul class="information__list features">
-          <li class="features__item">
-            <b class="features__caption">
+        <ul class="information__list">
+          <li class="information__item">
+            <b class="information__caption">
               Поднимает настроение
             </b>
-            <p class="features__description">
+            <p class="information__description">
               Приложение позволит вам победить осеннюю хандру и депрессию
               буквально в несколько кликов!
             </p>
           </li>
-          <li class="features__item">
-            <b class="features__caption">
+          <li class="information__item">
+            <b class="information__caption">
               Меняет мир вокруг
             </b>
-            <p class="features__description">
+            <p class="information__description">
               Сделайте снимок и украсьте его смайликом или текстовой подписью,
               чтобы усилисть эффект
             </p>
           </li>
-          <li class="features__item">
-            <b class="features__caption">
+          <li class="information__item">
+            <b class="information__caption">
               Заводит новых друзей
             </b>
-            <p class="features__description">
+            <p class="information__description">
               Ставьте лайки, комментируйте, делитесь фотографиями с друзьями
               и заводите новых
             </p>
@@ -95,110 +96,110 @@
         </ul>
         <img class="information__image" src="http://placehold.it/157x320" alt="Розовый фильтр и смайлы">
       </section>
-      <section class="reviews">
+      <section class="reviews-slider">
         <h2 class="visually-hidden">Отзывы</h2>
-        <div class="reviews__slider slider">
-          <div class="slider__controls">
-            <label class="slider__control">
+        <div class="reviews-slider__wrapper">
+          <div class="reviews-slider__controls">
+            <label class="reviews-slider__control">
               <input type="radio" name="reviews" checked>
               <span class="visually-hidden">Первый отзыв</span>
             </label>
-            <label class="slider__control">
+            <label class="reviews-slider__control">
               <input type="radio" name="reviews">
               <span class="visually-hidden">Второй отзыв</span>
             </label>
-            <label class="slider__control">
+            <label class="reviews-slider__control">
               <input type="radio" name="reviews">
               <span class="visually-hidden">Третий отзыв</span>
             </label>
           </div>
-          <div class="slider__slides">
-            <blockquote class="slider__slide">
-              <cite class="slider__title">Николай Петров</cite>
-              <p class="slider__description">
-                Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          <div class="reviews-slider__slides">
+            <blockquote class="reviews-slider__slide">
+              <cite class="reviews-slider__title">Николай Петров</cite>
+              <p class="reviews-slider__description">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </p>
             </blockquote>
-            <blockquote class="slider__slide">
-              <cite class="slider__title">Николай Петров</cite>
-              <p class="slider__description">
-                Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            <blockquote class="reviews-slider__slide">
+              <cite class="reviews-slider__title">Николай Петров</cite>
+              <p class="reviews-slider__description">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </p>
             </blockquote>
-            <blockquote class="slider__slide">
-              <cite class="slider__title">Николай Петров</cite>
-              <p class="slider__description">
-                Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            <blockquote class="reviews-slider__slide">
+              <cite class="reviews-slider__title">Николай Петров</cite>
+              <p class="reviews-slider__description">
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </p>
             </blockquote>
           </div>
         </div>
       </section>
-      <section class="price">
+      <section class="price-slider">
         <h2 class="visually-hidden">Прайс-лист</h2>
-        <div class="price__slider slider">
-          <div class="slider__controls">
-            <label class="slider__control">
+        <div class="price-slider__wrapper">
+          <div class="price-slider__controls">
+            <label class="price-slider__control">
               <input type="radio" name="price">
               <span class="visually-hidden">Тариф 1</span>
             </label>
-            <label class="slider__control">
+            <label class="price-slider__control">
               <input type="radio" name="price" checked>
               <span class="visually-hidden">Тариф 2</span>
             </label>
-            <label class="slider__control">
+            <label class="price-slider__control">
               <input type="radio" name="price">
               <span class="visually-hidden">Тариф 3</span>
             </label>
           </div>
-          <table class="slider__table price-list">
-            <tr class="price-list__row">
-              <th class="price-list__header">
+          <table class="price-slider__table price-table">
+            <tr class="price-table__row">
+              <th class="price-table__header">
                 Базовый
-                <span class="price-list__price">3,99 USD</span>
+                <span class="price-table__price">3,99 USD</span>
               </th>
-              <th class="price-list__header">
+              <th class="price-table__header">
                 Стандарт
-                <span class="price-list__price">3,99 USD</span>
+                <span class="price-table__price">3,99 USD</span>
               </th>
-              <th class="price-list__header">
+              <th class="price-table__header">
                 Премиум
-                <span class="price-list__price">3,99 USD</span>
+                <span class="price-table__price">3,99 USD</span>
               </th>
             </tr>
-            <tr class="price-list__row">
-              <td class="price-list__data price-list__data--yes">
+            <tr class="price-table__row">
+              <td class="price-table__data price-table__data--yes">
                 Розовый фильтр
               </td>
-              <td class="price-list__data price-list__data--yes">
+              <td class="price-table__data price-table__data--yes">
                 Розовый фильтр
               </td>
-              <td class="price-list__data price-list__data--yes">
+              <td class="price-table__data price-table__data--yes">
                 Розовый фильтр
               </td>
             </tr>
-            <tr class="price-list__row">
-              <td class="price-list__data price-list__data--no">
+            <tr class="price-table__row">
+              <td class="price-table__data price-table__data--no">
                 Смайлики
               </td>
-              <td class="price-list__data price-list__data--yes">
+              <td class="price-table__data price-table__data--yes">
                 Смайлики
               </td>
-              <td class="price-list__data price-list__data--yes">
+              <td class="price-table__data price-table__data--yes">
                 Смайлики
               </td>
             </tr>
-            <tr class="price-list__row">
-              <td class="price-list__data price-list__data--no">
+            <tr class="price-table__row">
+              <td class="price-table__data price-table__data--no">
                 Комментарии
               </td>
-              <td class="price-list__data price-list__data--no">
+              <td class="price-table__data price-table__data--no">
                 Комментарии
               </td>
-              <td class="price-list__data price-list__data--yes">
+              <td class="price-table__data price-table__data--yes">
                 Комментарии
               </td>
             </tr>

@@ -1,0 +1,30 @@
+.site-list {
+  .null-indents-list();
+  background-color: @color;
+}
+
+.site-list__item {
+  text-align: center;
+}
+
+.site-list__link {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 18px;
+  height: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    color: rgb(210, 40, 86);
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
+}

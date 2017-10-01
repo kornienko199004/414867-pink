@@ -1,0 +1,61 @@
+.form__title {
+  display: block;
+  .null-indents;
+  color: @purple;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+
+  &::placeholder {
+    font: inherit;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.form__list {
+  .null-indents-list();
+}
+
+.form__label {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form__wrapper--checkbox {
+  background-color: @gray;
+
+  & .form__title {
+    text-align: center;
+  }
+}
+
+.form__wrapper--radio {
+  background-color: @gray;
+
+  & .form__title {
+    text-align: center;
+  }
+}
+
+.form__textarea {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+  height: 197px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.form__wrapper--textarea {
+  & .form__title {
+    text-align: center;
+  }
+}

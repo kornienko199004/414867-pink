@@ -1,0 +1,73 @@
+body {
+  min-width: 320px;
+  font-family: @font-common;
+  font-size: 14px;
+  line-height: 24px;
+  .null-indents();
+  background-color: white;
+  color: @color;
+}
+
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  white-space: nowrap;
+}
+
+.button {
+  width: 277px;
+  padding: 14px 0 16px 0;
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+  font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  outline: 0;
+
+  &:hover,
+  &:focus {
+    color: @purple;
+    background-color: @white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    background-color: @white;
+  }
+}
+
+.button--form {
+  margin: 0 auto;
+  display: block;
+  width: 280px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(42, 171, 109);
+  color: @white;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(28, 155, 94);
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
