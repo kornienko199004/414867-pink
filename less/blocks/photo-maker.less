@@ -1,0 +1,50 @@
+.photo-maker {
+  width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+}
+
+.photo-maker__form {
+  background-color: @gray;
+}
+
+.photo-maker__range {
+  display: block;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.button--post {
+  color: @purple;
+  border-color: @purple;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @purple;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @purple;
+  }
+}
+
+.button--cancel {
+  color: rgba(40, 54, 69, 0.1);
+  border-color: rgba(40, 54, 69, 0.1);
+
+  &:hover,
+  &:focus {
+    color: rgba(40, 54, 69, 0.3);
+    background-color: transparent;
+    border-color: rgba(40, 54, 69, 0.3);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @color;
+    opacity: 0.3;
+  }
+}
