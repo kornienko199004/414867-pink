@@ -1,22 +1,51 @@
 .page-header {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
+  width: 320px;
   text-align: center;
 }
 
+@media (min-width: @table-width) {
+  .page-header {
+    width: @table-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 1200px;
+  }
+}
+
 .page-header__wrapper {
-  width: 100%;
   .null-indents();
   background-color: rgb(29, 38, 49);
+  width: 100%;
 }
 
 .page-header__wrapper--top {
+  margin: 0 auto;
   box-sizing: border-box;
   background-color: rgb(29, 38, 49);
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% top;
+  padding-top: 95px;
+}
+
+@media (min-width: @table-width) {
+  .page-header__wrapper--top {
+    padding-top: 190px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper--top {
+    padding-top: 125px;
+  }
+}
+
+.page-header__wrapper--main-page {
   padding-top: 147px;
 }
 
@@ -27,6 +56,12 @@
 .page-header__description,
 .page-header__image {
   .null-indents;
+}
+
+@media (max-width: @table-width) {
+  .page-header__description--hidden {
+    display: none;
+  }
 }
 
 .page-header__title {

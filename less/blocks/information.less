@@ -1,19 +1,85 @@
 .information {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 320px;
   margin: 0 auto;
   text-align: center;
   background-color: @gray;
 }
 
+@media (min-width: @table-width) {
+  .information {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: @table-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information {
+    flex-direction: row;
+    justify-content: center;
+    width: 1200px;
+  }
+}
+
 .information__title {
+  width: 100%;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: lighter;
   .null-indents();
   background-color: @white;
+  margin-bottom: 35px;
+}
+
+@media (min-width: @table-width) {
+  .information__title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information__title {
+    font-size: 50px;
+  }
 }
 
 .information__list {
   .null-indents-list();
+}
+
+@media (min-width: @desktop-width) {
+  .information__list {
+    width: 940px;
+    display: flex;
+    justify-content: space-around;
+    order: 2;
+  }
+
+  .information__wrapper--images-container {
+    width: 940px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+}
+
+.information__item {
+  width: 280px;
+}
+
+@media (min-width: @table-width) {
+  .information__item {
+    width: 310px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information__item {
+    width: 240px;
+  }
 }
 
 .information__caption {
@@ -21,4 +87,67 @@
   font-size: 18px;
   line-height: 24px;
   color: rgb(0, 0, 0);
+}
+
+.information__wrapper--without,
+.information__wrapper--pink {
+  display: none;
+}
+
+@media (min-width: @desktop-width) {
+  .information__wrapper--without,
+  .information__wrapper--pink {
+    display: block;
+  }
+}
+
+.information__reseach {
+  display: none;
+  text-align: left;
+}
+
+@media (min-width: @table-width) {
+  .information__reseach {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: @white;
+  }
+
+  .information__wrapper--reseach {
+    width: 310px;
+
+    & .information__caption {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .information__reseach {
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    width: 940px;
+    background-color: @gray;
+  }
+
+  .information__wrapper--reseach {
+    width: 570px;
+
+    & .information__caption {
+      font-size: 30px;
+    }
+  }
+}
+
+.information__link {
+  color: @purple;
+}
+
+@media (min-width: @desktop-width) {
+  .information__link {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

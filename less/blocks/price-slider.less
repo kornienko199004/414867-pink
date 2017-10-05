@@ -1,6 +1,19 @@
 .price-slider {
   position: relative;
+  overflow: hidden;
+  min-height: 200px;
   margin: 0 auto;
-  width: 320px;
   background-color: @gray;
+}
+
+@media (min-width: @table-width) {
+  .price-slider {
+    width: @table-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price-slider {
+    width: @desktop-width;
+  }
 }

@@ -13,3 +13,23 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: @table-width) {
+  .page-footer--main-page {
+    display: none;
+  }
+}
+
+@media (min-width: @table-width) {
+  .page-footer {
+    width: 660px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1200px;
+  }
+}

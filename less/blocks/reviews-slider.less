@@ -5,6 +5,30 @@
   text-align: center;
 }
 
+.reviews-slider__wrapper {
+  text-align: center;
+}
+
+@media (min-width: @table-width) {
+  .reviews-slider__slide {
+    width: 620px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews-slider__slide {
+    width: 620px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reviews-slider__wrapper {
+    display: none;
+  }
+}
+
 .reviews-slider__title {
   font-weight: bold;
   font-style: normal;
@@ -19,6 +43,5 @@
 }
 
 .reviews-slider__controls {
-  width: 320px;
   margin: 0 auto;
 }

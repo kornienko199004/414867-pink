@@ -8,6 +8,10 @@
   line-height: 30px;
 }
 
+.form__legend {
+  .null-indents();
+}
+
 .form__input {
   box-sizing: border-box;
   width: 100%;
@@ -57,5 +61,163 @@
 .form__wrapper--textarea {
   & .form__title {
     text-align: center;
+  }
+}
+
+@media (max-width: @table-width) {
+  .form__fieldset {
+    border: none;
+  }
+
+  .form__title--hidden {
+    display: none;
+  }
+}
+
+@media (min-width: @table-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__wrapper {
+    width: 100%;
+  }
+
+  .form-container__description {
+    .null-indents();
+  }
+
+  .form__title {
+    display: inline;
+    width: auto;
+    margin-right: 15px;
+  }
+
+  .form__input {
+    flex-grow: 1;
+  }
+
+  .form__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__wrapper--checkbox {
+    background-color: transparent;
+  }
+
+  .form__textarea {
+    width: 496px;
+  }
+
+  .form__text--contacts {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .form__wrapper--submit {
+    box-sizing: border-box;
+    display: flex;
+    .null-indents();
+    justify-content: space-between;
+  }
+
+  .form__wrapper--personal-id {
+    order: -3;
+  }
+
+  .form__wrapper--radio {
+    order: -2;
+    background-color: transparent;
+  }
+
+  .form__wrapper--contact-information {
+    order: -1;
+  }
+}
+
+.form__fieldset--personal-id {
+  border: none;
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__wrapper {
+    width: 100%;
+  }
+
+  .form-container__description {
+    .null-indents();
+  }
+
+  .form__title {
+    display: inline;
+    width: auto;
+    margin-right: 15px;
+  }
+
+  .form__input {
+    flex-grow: 1;
+  }
+
+  .form__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__wrapper--checkbox {
+    background-color: transparent;
+  }
+
+  .form__textarea {
+    width: 820px;
+  }
+
+  .form__text--contacts {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+
+  .form__wrapper--submit {
+    box-sizing: border-box;
+    display: flex;
+    .null-indents();
+    justify-content: space-between;
+  }
+
+  .form__wrapper--personal-id {
+    order: -3;
+    width: 50%;
+    padding-top: 20px;
+  }
+
+  .form__wrapper--radio {
+    order: -2;
+    width: 50%;
+    background-color: transparent;
+  }
+
+  .form__wrapper--contact-information {
+    order: -1;
+  }
+
+  .form__wrapper--information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__item {
+    width: 260px;
   }
 }
