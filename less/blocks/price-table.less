@@ -1,10 +1,14 @@
 .price-table {
-  position: absolute;
   width: 834px;
   margin: 0 auto;
-  left: -258px;
   border-collapse: collapse;
   background-color: @white;
+}
+
+@media (max-width: @table-width) {
+  .price-table {
+    transform: translate(-258px);
+  }
 }
 
 @media (min-width: @table-width) {

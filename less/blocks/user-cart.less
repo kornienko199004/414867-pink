@@ -18,7 +18,7 @@
   width: 100%;
   font-size: 0;
   line-height: 0;
-  .null-indents();
+  margin: 0 auto;
 }
 
 .user-cart__wrapper--panorama {
@@ -27,7 +27,6 @@
 
 .user-cart__user-name {
   .null-indents();
-  margin: 0 auto;
   text-align: left;
   font-weight: bold;
   line-height: 24px;
@@ -42,7 +41,6 @@
 
 .user-cart__coment {
   .null-indents();
-  margin: 0 auto;
   text-align: left;
 }
 
@@ -61,16 +59,19 @@
 
   .user-cart__wrapper--panorama {
     width: 620px;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .user-cart__user-name--panorama {
+    order: -2;
   }
 
   .user-cart__like--panorama {
-    position: absolute;
-    top: 2px;
-    right: 20px;
+    order: -1;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .user-cart__wrapper {
@@ -88,11 +89,5 @@
   .user-cart__wrapper--panorama {
     width: 940px;
     position: relative;
-  }
-
-  .user-cart__like--panorama {
-    position: absolute;
-    top: 2px;
-    right: 20px;
   }
 }

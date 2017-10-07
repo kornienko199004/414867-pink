@@ -1,15 +1,18 @@
 .information {
+  background-color: @gray;
+}
+
+.information__container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 320px;
   margin: 0 auto;
   text-align: center;
-  background-color: @gray;
 }
 
 @media (min-width: @table-width) {
-  .information {
+  .information__container {
     flex-direction: row-reverse;
     justify-content: space-between;
     width: @table-width;
@@ -17,31 +20,37 @@
 }
 
 @media (min-width: @desktop-width) {
-  .information {
+  .information__container {
     flex-direction: row;
     justify-content: center;
-    width: 1200px;
+    width: @desktop-width;
   }
 }
 
-.information__title {
+.information__wrapper--title {
+  background-color: @white;
   width: 100%;
+}
+
+.information__title {
+  width: 210px;
   margin: 0 auto;
   font-size: 24px;
   font-weight: lighter;
-  .null-indents();
   background-color: @white;
   margin-bottom: 35px;
 }
 
 @media (min-width: @table-width) {
   .information__title {
+    width: 620px;
     font-size: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__title {
+    width: 740px;
     font-size: 50px;
   }
 }
@@ -104,49 +113,61 @@
 .information__reseach {
   display: none;
   text-align: left;
+  width: 100%;
 }
 
 @media (min-width: @table-width) {
   .information__reseach {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    display: block;
     background-color: @white;
   }
 
   .information__wrapper--reseach {
-    width: 310px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 660px;
 
     & .information__caption {
+      width: 400px;
       font-size: 30px;
+    }
+
+    & .information__description {
+      width: 400px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__reseach {
-    display: flex;
-    justify-content: flex-end;
     order: 3;
-    width: 940px;
     background-color: @gray;
   }
 
   .information__wrapper--reseach {
-    width: 570px;
+    width: 940px;
 
     & .information__caption {
+      width: 540px;
       font-size: 30px;
+    }
+
+    & .information__description {
+      width: 540px;
     }
   }
 }
 
 .information__link {
   color: @purple;
+  width: 400px;
 }
 
 @media (min-width: @desktop-width) {
   .information__link {
+    width: 540px;
     font-size: 18px;
     line-height: 30px;
   }
