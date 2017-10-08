@@ -48,3 +48,65 @@
     opacity: 0.3;
   }
 }
+
+@media (max-width: @table-width) {
+  .photo-maker__range {
+    display: none;
+  }
+
+  .photo-maker__range--active {
+    display: block;
+  }
+}
+
+@media (min-width: @table-width) {
+  .photo-maker {
+    width: 660px;
+  }
+
+  .photo-maker__form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .photo-maker__controls {
+    width: 260px;
+  }
+
+  .photo-maker__buttons {
+    width: 260px;
+  }
+
+  .photo-maker__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 280px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-maker {
+    width: 940px;
+  }
+
+  .photo-maker__controls {
+    width: 410px;
+  }
+
+  .photo-maker__wrapper {
+    width: 410px;
+  }
+
+  .photo-maker__buttons {
+    width: 100%;
+  }
+
+  .button--post {
+    width: 180px;
+  }
+
+  .button--cancel {
+    width: 180px;
+  }
+}

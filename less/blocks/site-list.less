@@ -1,10 +1,27 @@
 .site-list {
   .null-indents-list();
   background-color: @color;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @table-width) {
+    width: 660px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-list__item {
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
 }
 
 .site-list__link {
