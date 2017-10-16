@@ -1,8 +1,25 @@
+.reviews-slider__hidden {
+  display: none;
+}
+
+
+@media (max-width: @table-width-max) {
+  .reviews-slider {
+    padding-top: 25px;
+    padding-bottom: 64px;
+  }
+
+  .reviews-slider__hidden {
+    display: inline;
+  }
+}
+
 .reviews-slider__slide {
   .null-indents();
   margin: 0 auto;
   width: 320px;
   text-align: center;
+  padding-top: 17px;
 }
 
 .reviews-slider__wrapper {
@@ -14,14 +31,17 @@
     width: 620px;
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews-slider__slide {
-    width: 620px;
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
+    padding-bottom: 123px;
+    padding-top: 0;
   }
 
   .reviews-slider__wrapper {
@@ -39,9 +59,77 @@
 
 .reviews-slider__description {
   .null-indents();
+  width: 280px;
   line-height: 30px;
+  padding-top: 14px;
+  margin: 0 auto;
+  margin-bottom: 27px;
 }
 
 .reviews-slider__controls {
   margin: 0 auto;
+}
+
+.reviews-slider__about {
+  display: none;
+}
+
+@media (min-width: @table-width) {
+  .reviews-slider__description {
+    font-size: 18px;
+    width: 620px;
+    margin-bottom: 35px;
+    padding-right: 20px;
+    padding-top: 0;
+  }
+
+  .reviews-slider__about {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: @table-width) {
+  .reviews-slider__title {
+    font-size: 20px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews-slider {
+    padding-top: 185px;
+    padding-bottom: 0;
+  }
+
+  .reviews-slider__description::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+
+  .reviews-slider__description {
+    .null-indents();
+    margin: 0 auto;
+    margin-bottom: 36px;
+    padding-top: 0;
+    font-size: 18px;
+    width: 680px;
+  }
+
+  .reviews-slider__title {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 0;
+  }
+
+  .reviews-slider__about {
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+  }
 }

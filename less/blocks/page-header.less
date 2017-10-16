@@ -1,6 +1,7 @@
 .page-header {
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 30px;
   text-align: center;
   background-color: rgb(29, 38, 49);
 }
@@ -8,17 +9,25 @@
 .page-header__wrapper {
   .null-indents();
   width: 320px;
+
+  @media (min-width: @table-width) {
+    width: @table-width;
+  }
 }
 
 @media (min-width: @table-width) {
-  .page-header__wrapper {
-    width: @table-width;
+  .page-header {
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     width: 1200px;
+  }
+
+  .page-header {
+    padding-bottom: 0;
   }
 }
 
@@ -29,39 +38,49 @@
   background-color: rgb(29, 38, 49);
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% top;
-  padding-top: 95px;
+  background-position: 50% -40%;
+  padding-top: 78px;
 }
+
 
 @media (min-width: @table-width) {
   .page-header__wrapper--top {
     padding-top: 190px;
     display: flex;
-    justify-content: center;
+    width: 620px;
+    justify-content: space-between;
+    background-position: 50% top;
   }
 
   .page-header__image {
     order: 1;
+  }
+
+  .page-header__wrapper--main-page {
+    padding-top: 85px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header__wrapper--top {
     padding-top: 125px;
+    width: 940px;
+    background-position: 50% top;
+  }
+
+  .page-header__wrapper--main-page {
+    padding-top: 210px;
   }
 }
 
-.page-header__wrapper--main-page {
-  padding-top: 147px;
-}
-
 .page-header__wrapper--bottom {
-  padding-top: 28px;
+  padding-top: 23px;
 }
 
 @media (min-width: @table-width) {
   .page-header__wrapper--bottom {
     width: 300px;
+    padding-top: 8px;
   }
 }
 
@@ -76,7 +95,7 @@
   .null-indents;
 }
 
-@media (max-width: @table-width) {
+@media (max-width: @mobyle-width-only) {
   .page-header__description--hidden {
     display: none;
   }
@@ -86,6 +105,7 @@
   .page-header__description {
     width: 210px;
     margin: 0 auto;
+    margin-bottom: 31px;
     font-size: 40px;
     line-height: 48px;
     font-weight: lighter;
@@ -95,20 +115,61 @@
 
 @media (min-width: @desktop-width) {
   .page-header__description {
-    width: 280px;
+    width: 300px;
     font-size: 50px;
     line-height: 60px;
     font-weight: lighter;
+    padding-left: 2px;
+    margin-bottom: 53px;
     color: @white;
   }
 }
 
 .page-header__title {
   margin: 0 auto;
-  padding-bottom: 170px;
   width: 250px;
   font-size: 24px;
   line-height: 30px;
   font-weight: lighter;
   color: @white;
+
+  @media (min-width: @table-width) {
+    font-size: 50px;
+    line-height: 60px;
+    width: 500px;
+  }
+}
+
+.page-header__title--form {
+  @media (min-width: @desktop-width) {
+    width: 820px;
+  }
+}
+
+.page-header__wrapper--content-page {
+  box-sizing: border-box;
+  padding-top: 26px;
+  padding-bottom: 52px;
+
+  @media (min-width: @table-width) {
+    padding-top: 65px;
+    padding-bottom: 142px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 172px;
+    padding-bottom: 102px;
+  }
+}
+
+.page-header__wrapper--form-page {
+  padding-bottom: 22px;
+
+  @media (min-width: @table-width) {
+    padding-bottom: 81px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 102px;
+  }
 }

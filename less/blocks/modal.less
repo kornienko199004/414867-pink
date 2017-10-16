@@ -1,7 +1,10 @@
 .modal {
+  display: none;
   width: 320px;
+  box-sizing: border-box;
   margin: 0 auto;
-  background-color: @gray;
+  padding-top: 40px;
+  background-color: @white;
 }
 
 .modal__title {
@@ -10,11 +13,59 @@
   line-height: 24px;
   color: @black;
   text-align: center;
+  background-color: @white;
+  padding-bottom: 30px;
+
+  @media (min-width: @table-width) {
+    width: 250px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
 }
 
 .modal__description {
+  .null-indents;
+  width: 280px;
+  margin: 0 auto;
   background-color: @white;
+  padding-bottom: 30px;
   text-align: center;
+
+  @media (min-width: @table-width) {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
+}
+
+.modal__button {
+  @media (min-width: @table-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
+}
+
+.modal__wrapper {
+  padding-top: 47px;
+  padding-bottom: 20px;
+  background-color: @gray;
+
+  @media (min-width: @table-width) {
+    padding-bottom: 47px;
+  }
 }
 
 @media (min-width: @table-width) {
