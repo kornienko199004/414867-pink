@@ -1,8 +1,13 @@
 .modal {
   display: none;
+  position: fixed;
   width: 320px;
+  z-index: 10;
   box-sizing: border-box;
   margin: 0 auto;
+  left: 50%;
+  top: 100px;
+  margin-left: -160px;
   padding-top: 40px;
   background-color: @white;
 }
@@ -71,11 +76,13 @@
 @media (min-width: @table-width) {
   .modal {
     width: 460px;
+    margin-left: -230px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .modal {
     width: 780px;
+    margin-left: -390px;
   }
 }
