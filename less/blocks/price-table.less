@@ -3,9 +3,14 @@
   margin: 0 auto;
   border-collapse: collapse;
   background-color: @white;
+  margin-bottom: 60px;
 }
 
-@media (max-width: @table-width) {
+.price-table__row {
+  .null-indents();
+}
+
+@media (max-width: @mobyle-width-only) {
   .price-table {
     transform: translate(-258px);
   }
@@ -20,17 +25,27 @@
 
 .price-table__header {
   font-size: 18px;
-  border: 2px solid rgb(229, 229, 229);
+  .null-indents();
+  position: relative;
+  box-sizing: border-box;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   background-color: @color;
+  border-radius: 4px;
+  padding-top: 17px;
+  padding-bottom: 22px;
 }
 
 .price-table__header:nth-child(1) {
   background-color: @gray;
   border: none;
+}
+
+.price-table__header:nth-child(3) {
+  border-left: 2px solid @white;
+  border-right: 2px solid @white;
 }
 
 @media (max-width: @table-width) {
@@ -42,7 +57,8 @@
 
 .price-table__price {
   display: block;
-  font-size: 18px;
+  .null-indents();
+  font-size: 24px;
   font-weight: lighter;
   line-height: 30px;
   text-transform: uppercase;
@@ -51,36 +67,160 @@
 .price-table__data {
   font-size: 14px;
   box-sizing: border-box;
-  padding: 0 25px;
+  padding: 14px 10px 14px 22px;
   border: 2px solid rgb(229, 229, 229);
   line-height: 30px;
-  width: 278px;
+  width: 280px;
   color: @color;
+}
+
+.price-table__text {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 @media (min-width: @table-width) {
   .price-table__data {
-    width: 153px;
-    height: 48px;
-    padding: 0;
+    width: 155px;
+    padding: 8px 15px 8px 16px;
+    font-size: 14px;
   }
 
   .price-table__text {
     display: none;
   }
+
+  .price-table__header {
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 2px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .price-table__price {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.price-table__header--hit::before {
+  content: "";
+  width: 73px;
+  height: 74px;
+  position: absolute;
+  background-image: url("../img/bg-hit.svg");
+  background-position: 0 -2px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.price-table__header--hit::after {
+  content: "хит";
+  width: 74px;
+  height: 73px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: @table-width) and (max-width: @table-width-max) {
+  .price-table__header--hit::before {
+    content: "";
+    width: 73px;
+    height: 74px;
+    position: absolute;
+    background-image: url("../img/bg-hit.svg");
+    background-position: 0 -13px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+  .price-table__header--hit::after {
+    content: "хит";
+    width: 74px;
+    height: 73px;
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: @table-width) {
+  .price-table {
+    margin-bottom: 70px;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .price-table {
+    margin-bottom: 97px;
+  }
+
   .price-table__data {
     width: 234px;
-    height: 48px;
-    padding: 0;
+    position: relative;
+    padding: 15px 20px 15px 21px;
+    font-size: 18px;
+  }
+
+  .price-table__header {
+    padding-top: 17px;
+    padding-bottom: 20px;
+    padding-left: 2px;
+    font-size: 18px;
+  }
+
+  .price-table__price {
+    padding-top: 2px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .price-table__header--hit::before {
+    content: "";
+    width: 74px;
+    height: 73px;
+    position: absolute;
+    background-image: url("../img/bg-hit.svg");
+    top: 0;
+    left: 0;
+  }
+
+  .price-table__header--hit::after {
+    content: "хит";
+    width: 74px;
+    height: 73px;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
+    transform: rotate(-45deg);
   }
 }
 
 .price-slider__controls {
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   left: 50%;
   margin-left: -30px;
 }

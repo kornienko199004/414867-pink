@@ -1,20 +1,37 @@
 .page-footer {
   width: 320px;
   margin: 0 auto;
+  padding-top: 40px;
   text-align: center;
 }
 
 .page-footer__logo {
   .null-indents();
+  margin-bottom: 35px;
+}
+
+.page-footer__social {
+  margin-bottom: 33px;
 }
 
 .page-footer__list {
   .null-indents-list();
+  margin: 0 auto;
+  width: 180px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-@media (max-width: @table-width) {
+.page-footer__feedback {
+  width: 180px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: left;
+}
+
+@media (max-width: @mobyle-width-only) {
   .page-footer--main-page {
     display: none;
   }
@@ -22,14 +39,78 @@
 
 @media (min-width: @table-width) {
   .page-footer {
-    width: 660px;
+    width: 620px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-top: 35px;
+  }
+
+  .page-footer__logo {
+    width: 150px;
+  }
+
+  .page-footer__list {
+    justify-content: flex-start;
+    width: 200px;
+    padding-top: 5px;
+  }
+
+  .page-footer__item {
+    margin-right: 13px;
+  }
+
+  .page-footer__item:last-child {
+    margin-right: 0;
+  }
+
+  .page-footer__feedback {
+    .null-indents();
+    padding-top: 5px;
+    width: 130px;
+  }
+
+  .page-footer__link {
+    display: inline-block;
+    width: 27px;
+    height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    width: 1200px;
+    width: 940px;
+    padding-top: 72px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .page-footer__list {
+    justify-content: flex-start;
+    width: 200px;
+    padding-left: 35px;
+    padding-top: 5px;
+  }
+
+  .page-footer__item {
+    margin-right: 13px;
+  }
+
+
+  .page-footer__item:last-child {
+    margin-right: 0;
+  }
+
+  .page-footer__feedback {
+    .null-indents();
+    width: 160px;
+    padding-left: 7px;
+    padding-top: 5px;
+    font-size: 18px;
+  }
+
+  .page-footer__link {
+    display: inline-block;
+    width: 27px;
+    height: 30px;
   }
 }

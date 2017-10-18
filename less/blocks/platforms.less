@@ -1,7 +1,99 @@
+.platforms {
+  padding-top: 30px;
+}
+
+@media (min-width: @table-width) {
+  .platforms {
+    padding-top: 43px;
+    margin-bottom: 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .platforms {
+    padding-top: 66px;
+    margin-bottom: 122px;
+  }
+}
+
+.platforms__wrapper {
+  margin: 0 auto;
+  margin-bottom: 22px;
+  width: 204px;
+  box-sizing: border-box;
+  vertical-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
 
 .platforms__description {
+  width: 240px;
   font-size: 14px;
   line-height: 24px;
   color: rgb(255, 255, 255);
-  .null-indents;
+  .null-indents();
+  margin: 0 auto;
+}
+
+@media (min-width: @table-width) {
+  .platforms__description {
+    width: auto;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: lighter;
+  }
+
+  .platforms__wrapper {
+    margin-bottom: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .platforms__description {
+    padding-left: 3px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: lighter;
+  }
+
+  .platforms__wrapper {
+    margin: 0 auto;
+    width: 204px;
+    box-sizing: border-box;
+    margin-bottom: 55px;
+    vertical-align: center;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+.platforms__item:last-child {
+  margin-right: 0;
+}
+
+.platforms__item--ios {
+  width: 46px;
+  height: 58px;
+  background-image: url("../img/logo-apple.svg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+.platforms__item--android {
+  width: 44px;
+  height: 47px;
+  background-image: url("../img/logo-android.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.platforms__item--microsoft {
+  width: 43px;
+  height: 47px;
+  background-image: url("../img/logo-microsoft.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 0;
 }
