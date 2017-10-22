@@ -22,7 +22,8 @@
 
 .page-header__wrapper {
   .null-indents();
-  width: 320px;
+  //width: 320px;
+  width: 100%;
 
   @media (min-width: @table-width) {
     width: @table-width;
@@ -67,9 +68,15 @@
 }
 
 .page-header__inner {
+  margin: 0 auto;
+  position: relative;
+  width: 320px;
+
+  @media (min-width: @table-width) {
+    width: 640px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin: 0 auto;
-    position: relative;
     width: 1070px;
   }
 }
@@ -99,7 +106,8 @@
   .page-header__wrapper--top {
     padding-top: 190px;
     display: flex;
-    width: 660px;
+    //width: 660px;
+    width: 100%;
     justify-content: space-between;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: 50% top;
@@ -116,10 +124,10 @@
 
   .page-header__wrapper--main-page {
     position: relative;
-    padding-top: 151px;
+    padding-top: 194px;
     padding-left: 20px;
     padding-bottom: 2px;
-    background-position: center -47px;
+    background-position: center -4px;
   }
 }
 
@@ -144,11 +152,12 @@
 
 .page-header__wrapper--bottom {
   padding-top: 23px;
-  padding-bottom: 2px;
+  padding-bottom: 0;
 }
 
 @media (min-width: @table-width) {
   .page-header__wrapper--bottom {
+    position: relative;
     width: 300px;
     padding-top: 8px;
     z-index: 1;
@@ -226,7 +235,7 @@
   padding-bottom: 82px;
 
   @media (min-width: @table-width) {
-    padding-top: 132px;
+    padding-top: 178px;
     padding-bottom: 142px;
   }
 
@@ -237,7 +246,7 @@
 }
 
 .page-header__wrapper--form-page {
-  padding-bottom: 22px;
+  padding-bottom: 54px;
 
   @media (min-width: @table-width) {
     padding-bottom: 81px;

@@ -28,6 +28,9 @@
 .page-footer__feedback {
   width: 180px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
   margin: 0 auto;
   padding-left: 25px;
   padding-right: 25px;
@@ -60,7 +63,7 @@
   }
 
   .page-footer__item {
-    margin-right: 13px;
+    margin-right: 18px;
   }
 
   .page-footer__item:last-child {
@@ -69,7 +72,10 @@
 
   .page-footer__feedback {
     .null-indents();
-    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding-top: 20px;
     width: 130px;
   }
 
@@ -96,7 +102,7 @@
   }
 
   .page-footer__item {
-    margin-right: 13px;
+    margin-right: 18px;
   }
 
 
@@ -107,14 +113,31 @@
   .page-footer__feedback {
     .null-indents();
     width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 7px;
-    padding-top: 5px;
     font-size: 18px;
   }
 
   .page-footer__link {
     display: inline-block;
+    padding-top: 10px;
+    box-sizing: border-box;
     width: 27px;
-    height: 30px;
+    height: auto;
   }
+}
+
+.page-footer__link:hover .page-footer__link-image,
+.page-footer__link:focus .page-footer__link-image {
+  fill: @color;
+}
+
+.page-footer__link:active .page-footer__link-image {
+  fill: rgb(190, 194, 199);
+}
+
+.page-footer__logo:hover .page-footer__logo-image {
+  fill: #000000;
 }

@@ -1,10 +1,10 @@
 .user-cart {
   .null-indents();
   margin: 0 auto;
-  margin-bottom: 23px;
+  margin-bottom: 18px;
 
   @media (min-width: @table-width) {
-    margin-bottom: 22px;
+    margin-bottom: 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,8 +13,6 @@
 }
 
 .user-cart--panorama {
-  margin-bottom: 24px;
-
   @media (min-width: @desktop-width) {
     margin-bottom: 10px;
   }
@@ -27,6 +25,7 @@
 }
 
 .user-cart__panorama {
+  position: relative;
   width: 100%;
   font-size: 0;
   line-height: 0;
@@ -152,6 +151,7 @@
   }
 
   .user-cart__panorama {
+    position: relative;
     text-align: center;
   }
 
@@ -197,5 +197,70 @@
     position: relative;
     padding-top: 25px;
     padding-bottom: 11px;
+  }
+}
+
+@media (max-width: @mobyle-width-only) {
+  .user-cart__panorama::before {
+    content: "Панорама дня";
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
+  }
+}
+
+@media (min-width: @table-width) {
+  .user-cart__panorama::before {
+    content: "Панорама дня";
+    z-index: 12;
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 57px;
+    right: 20%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .user-cart__panorama::before {
+    content: "Панорама дня";
+    z-index: 12;
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 57px;
+    right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
   }
 }

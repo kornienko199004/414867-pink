@@ -30,7 +30,7 @@
   font-size: 14px;
   line-height: 30px;
   padding-left: 22px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .form__legend {
@@ -101,6 +101,16 @@
   }
 }
 
+.form__input:hover,
+.form__input:focus {
+  border-color: @color;
+  outline: 0;
+}
+
+.form__input:active {
+  border-color: @purple;
+}
+
 .form__list {
   .null-indents-list();
 }
@@ -166,6 +176,25 @@
   @media (min-width: @table-width) {
     left: 67px;
   }
+}
+
+.form__checkbox:hover ~ .form__span::before,
+.form__checkbox:focus ~ .form__span::before {
+  border-color: @color;
+}
+
+.form__checkbox:active ~ .form__span::before {
+  border-color: @purple;
+}
+
+
+.form__radio:hover ~ .form__span::before,
+.form__radio:focus ~ .form__span::before {
+  border-color: @color;
+}
+
+.form__radio:active ~ .form__span::before {
+  border-color: @purple;
 }
 
 .form__label--radio {
@@ -590,5 +619,47 @@
 
   @media (min-width: @desktop-width) {
     display: inline;
+  }
+}
+
+.form__text--phone {
+  position: relative;
+}
+
+.form__text--phone::before {
+  @media (min-width: @table-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    top: 2px;
+    right: 2px;
+    height: 57px;
+    background-color: @gray;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: center;
+  }
+}
+
+.form__text--mail {
+  position: relative;
+}
+
+.form__text--mail::before {
+  @media (min-width: @table-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 60px;
+    top: 2px;
+    right: 2px;
+    height: 57px;
+    background-color: @gray;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+    background-position: center;
   }
 }
