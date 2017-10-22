@@ -3,13 +3,14 @@
   margin: 0 auto;
   text-align: center;
   line-height: 30px;
+  padding-bottom: 3px;
 }
 
 .photo-maker__inner {
   width: 100%;
   background-color: @white;
-  padding-top: 23px;
-  padding-bottom: 61px;
+  padding-top: 26px;
+  padding-bottom: 39px;
 
   @media (min-width: @table-width) {
     padding-top: 45px;
@@ -29,18 +30,22 @@
   text-align: center;
 
   @media (min-width: @table-width) {
-    width: 410px;
+    width: 440px;
     font-size: 18px;
     line-height: 30px;
   }
 }
 
 .photo-maker__form {
+  padding-top: 20px;
   background-color: @gray;
 }
 
 .photo-maker__range {
   display: block;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 22px;
   width: 280px;
 
   @media (min-width: @table-width) {
@@ -49,14 +54,98 @@
 
   @media (min-width: @desktop-width) {
     width: 290px;
+    min-height: 44px;
   }
 }
 
-.photo-maker__cut {
-  width: 44px;
-  height: 44px;
+.photo-maker__range-line {
+  display: block;
+  box-sizing: border-box;
+  width: 240px;
+  position: absolute;
+  top: 10px;
+  border: 1px solid @color;
+
+  @media (min-width: @table-width) {
+    width: 200px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 290px;
+    top: 15px;
+  }
+}
+
+.photo-maker__range-toggler {
+  display: block;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 4px;
+  right: 35px;
+  border: 2px solid @purple;
+  background-color: @white;
+  border-radius: 50%;
+
+  @media (min-width: @desktop-width) {
+    top: 9px;
+  }
+}
+
+.photo-maker__range--cut {
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      right: 21%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 25%;
+    }
+  }
+}
+
+
+.photo-maker__range--fill {
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      left: 12%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 250px;
+    }
+  }
+}
+
+.photo-maker__range--smile {
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      left: 47%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 56%;
+    }
+  }
+}
+
+.photo-maker__button--cut {
+  box-sizing: border-box;
+  .null-indents();
+  outline: 0;
+  width: 48px;
+  height: 48px;
   order: -3;
   margin-bottom: 30px;
+  border: none;
+  background-color: transparent;
 
   @media (min-width: @table-width) {
     width: 22px;
@@ -71,7 +160,12 @@
   }
 }
 
-.photo-maker__fill {
+.photo-maker__button--fill {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  box-sizing: border-box;
+  .null-indents();
   width: 48px;
   height: 43px;
   order: -2;
@@ -88,7 +182,12 @@
   }
 }
 
-.photo-maker__smile {
+.photo-maker__button--smile {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  box-sizing: border-box;
+  .null-indents();
   width: 32px;
   height: 32px;
   order: -1;
@@ -100,9 +199,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
   }
+}
+
+.photo-maker__image {
+  fill: rgb(181, 185, 190);
+}
+
+.photo-maker__image--active {
+  fill: @purple;
+}
+
+.photo-maker__button:hover .photo-maker__image,
+.photo-maker__button:focus .photo-maker__image {
+  fill: rgb(141, 148, 155);
 }
 
 .button--post {
@@ -173,12 +285,13 @@
     padding-right: 16px;
     justify-content: space-between;
     margin-bottom: 18px;
+    border-bottom: 1px solid rgb(221, 223, 224);
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
-    padding-top: 0;
-    padding-bottom: 15px;
+    padding-top: 3px;
+    padding-bottom: 10px;
     padding-left: 0;
     padding-right: 30px;
     justify-content: space-between;
@@ -203,6 +316,10 @@
     width: 240px;
     left: 50%;
     margin-left: -120px;
+
+    & .photo-maker__range-toggler {
+      background-color: @purple;
+    }
   }
 }
 
@@ -210,7 +327,8 @@
   line-height: 0;
   width: 280px;
   margin: 0 auto;
-  padding-bottom: 43px;
+  height: auto;
+  padding-bottom: 40px;
 }
 
 @media (min-width: @table-width) {

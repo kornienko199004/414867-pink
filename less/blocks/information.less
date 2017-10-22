@@ -13,10 +13,33 @@
 }
 
 .information__wrapper--title {
+  position: relative;
   background-color: @white;
   width: 100%;
   padding-top: 40px;
   padding-bottom: 36px;
+}
+
+.information__wrapper--title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 32px;
+  background-image: linear-gradient(to right bottom, @white 50%, @gray 50%);
+
+  @media (min-width: @table-width) {
+    content: "";
+    height: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: -240px;
+    width: 100%;
+    height: 240px;
+    background-image: linear-gradient(175deg, @white 50%, @gray 50%);
+    background-repeat: no-repeat;
+  }
 }
 
 .information__title {
@@ -33,16 +56,27 @@
 
 .information__list {
   .null-indents-list();
+  margin-bottom: 10px;
 }
 
 .information__item {
   width: 280px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+}
+
+.information__item:last-child {
+  @media (min-width: @table-width) {
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .information__description {
   .null-indents();
-  width: 250px;
+  width: 280px;
   margin: 0 auto;
 }
 
@@ -60,28 +94,50 @@
   color: rgb(0, 0, 0);
 }
 
+.information__image-wrapper {
+  position: relative;
+  .null-indents();
+  width: 157px;
+  height: 278px;
+  overflow: hidden;
+  z-index: 1;
+
+  @media (min-width: @table-width) {
+    width: 268px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 292px;
+    height: auto;
+  }
+}
+
 @media (min-width: @table-width) {
   .information__container {
     flex-direction: row-reverse;
     justify-content: flex-end;
     width: @table-width;
-    padding-left: 50px;
+    padding-left: 20px;
     padding-top: 4px;
+    flex-wrap: nowrap;
   }
 
   .information__description {
-    width: 300px;
+    width: 310px;
     .null-indents();
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__container {
-    padding-top: 80px;
+    padding-top: 125px;
+    margin: 0 auto;
     margin-bottom: 8px;
     padding-left: 0;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     width: @desktop-width;
   }
 }
@@ -97,6 +153,7 @@
   .information__wrapper--title {
     padding-top: 50px;
     padding-bottom: 96px;
+    margin-bottom: -49px;
   }
 
   .information__title:last-child {
@@ -135,7 +192,8 @@
 @media (min-width: @table-width) {
   .information__list {
     width: 301px;
-    padding-top: 24px;
+    padding-top: 70px;
+    padding-left: 4px;
     text-align: left;
   }
 
@@ -144,17 +202,17 @@
   }
 
   .information__wrapper--images-container {
-    margin-right: 146px;
+    margin-right: 38px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__list {
-    width: 940px;
+    width: 960px;
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    padding-left: 63px;
+    padding-left: 77px;
     padding-top: 0;
     order: 2;
     margin-bottom: 150px;
@@ -163,25 +221,29 @@
   .information__wrapper--images-container {
     width: 940px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-right: 0;
-    margin-bottom: 65px;
+    margin-bottom: 52px;
   }
 }
 
 @media (min-width: @table-width) {
   .information__item {
     width: 300px;
-    margin-bottom: 34px;
+    margin-bottom: 33px;
+  }
+
+  .information__item:last-child {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .information__item {
-    margin-right: 80px;
+    margin-right: 20px;
     padding-top: 4px;
     margin-bottom: 0;
-    width: 240px;
+    width: 300px;
   }
 
   .information__item:last-child {
@@ -202,11 +264,14 @@
 
   .information__caption {
     font-size: 30px;
+    width: 240px;
     line-height: 30px;
     margin-bottom: 24px;
   }
 
   .information__description {
+    width: 100%;
+    padding: 0;
     font-size: 18px;
     line-height: 30px;
   }
@@ -222,10 +287,11 @@
   .information__reseach {
     display: block;
     background-color: @white;
-    padding-top: 105px;
+    padding-top: 96px;
   }
 
   .information__wrapper--reseach {
+    position: relative;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -233,15 +299,15 @@
     width: 660px;
 
     & .information__caption {
-      width: 180px;
+      width: 200px;
       font-size: 30px;
       line-height: 36px;
-      margin-bottom: 13px;
+      margin-bottom: 10px;
     }
 
     & .information__description {
-      width: 290px;
-      margin-bottom: 10px;
+      width: 300px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -256,6 +322,62 @@
   }
 }
 
+.information__wrapper--reseach::before {
+  @media (min-width: @table-width) {
+    content: "";
+    position: absolute;
+    top: -36px;
+    left: 20px;
+    width: 239px;
+    height: 276px;
+    background-image: url("../img/icon-timer.svg");
+    background-size: 239px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    top: -93px;
+    left: 8px;
+    width: 299px;
+    height: 345px;
+    background-image: url("../img/icon-timer.svg");
+    background-size: 299px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.information__wrapper--reseach::after {
+  @media (min-width: @table-width) {
+    content: "24";
+    font-size: 96px;
+    font-weight: bold;
+    font-family: @font-common;
+    color: @purple;
+    position: absolute;
+    top: 33%;
+    left: 12.5%;
+    width: 239px;
+    height: 276px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: "24";
+    font-size: 120px;
+    font-weight: bold;
+    font-family: @font-common;
+    color: @purple;
+    position: absolute;
+    top: 25.7%;
+    left: 9.5%;
+    width: 239px;
+    height: 276px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .information__reseach {
     order: 3;
@@ -264,17 +386,17 @@
   }
 
   .information__wrapper--reseach {
-    width: 940px;
+    width: 960px;
     justify-content: flex-end;
 
     & .information__caption {
-      width: 572px;
+      width: 585px;
       margin-bottom: 24px;
       line-height: 30px;
     }
 
     & .information__description {
-      width: 572px;
+      width: 585px;
       margin-bottom: 31px;
     }
   }
@@ -292,6 +414,6 @@
   }
 
   .information__description {
-    width: 235px;
+    width: 240px;
   }
 }

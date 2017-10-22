@@ -1,13 +1,21 @@
 .user-cart {
   .null-indents();
-  width: 280px;
   margin: 0 auto;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
+
+  @media (min-width: @table-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //margin-bottom: 30px;
+  }
 }
 
 .user-cart--panorama {
-  width: 320px;
-  margin-bottom: 20px;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .user-cart__wrapper {
@@ -17,10 +25,40 @@
 }
 
 .user-cart__panorama {
+  position: relative;
   width: 100%;
   font-size: 0;
   line-height: 0;
   margin: 0 auto;
+}
+
+.user-cart__image-wrapper {
+  .null-indents();
+}
+
+.user-cart__image-wrapper--panorama {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: @table-width) {
+    width: 700px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: auto;
+  }
+}
+
+.user-cart__image-wrapper--content {
+  width: 280px;
+
+  @media (min-width: @table-width) {
+    width: 300px;
+    max-height: 300px;
+  }
 }
 
 .user-cart__wrapper--panorama {
@@ -93,6 +131,10 @@
   }
 }
 
+.user-cart__link {
+  width: 100%;
+}
+
 .user-cart__link--photo {
   @media (min-width: @table-width) {
     display: block;
@@ -109,13 +151,9 @@
     width: 100%;
   }
 
-  .user-cart--panorama {
-    width: 660px;
-  }
-
   .user-cart__panorama {
+    position: relative;
     text-align: center;
-    min-height: 509px;
   }
 
   .user-cart__wrapper--panorama {
@@ -158,7 +196,72 @@
   .user-cart__wrapper--panorama {
     width: 940px;
     position: relative;
-    padding-top: 21px;
+    padding-top: 25px;
     padding-bottom: 11px;
+  }
+}
+
+@media (max-width: @mobyle-width-only) {
+  .user-cart__image-wrapper--panorama::before {
+    content: "Панорама дня";
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
+  }
+}
+
+@media (min-width: @table-width) {
+  .user-cart__image-wrapper--panorama::before {
+    content: "Панорама дня";
+    z-index: 12;
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 57px;
+    right: 58px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .user-cart__image-wrapper--panorama::before {
+    content: "Панорама дня";
+    z-index: 12;
+    font-family: @font-common;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: @white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 54px;
+    right: 130px;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 140px;
+    background-color: @purple;
   }
 }
