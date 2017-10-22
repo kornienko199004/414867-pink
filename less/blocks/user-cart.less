@@ -37,6 +37,7 @@
 }
 
 .user-cart__image-wrapper--panorama {
+  position: relative;
   margin: 0 auto;
   width: 320px;
 
@@ -201,7 +202,7 @@
 }
 
 @media (max-width: @mobyle-width-only) {
-  .user-cart__panorama::before {
+  .user-cart__image-wrapper--panorama::before {
     content: "Панорама дня";
     font-family: @font-common;
     font-size: 12px;
@@ -221,7 +222,7 @@
 }
 
 @media (min-width: @table-width) {
-  .user-cart__panorama::before {
+  .user-cart__image-wrapper--panorama::before {
     content: "Панорама дня";
     z-index: 12;
     font-family: @font-common;
@@ -232,7 +233,7 @@
     text-transform: uppercase;
     position: absolute;
     top: 57px;
-    right: 20%;
+    right: 58px;
     box-sizing: border-box;
     text-align: center;
     padding-top: 12px;
@@ -244,7 +245,7 @@
 
 
 @media (min-width: @desktop-width) {
-  .user-cart__panorama::before {
+  .user-cart__image-wrapper--panorama::before {
     content: "Панорама дня";
     z-index: 12;
     font-family: @font-common;
@@ -254,8 +255,8 @@
     color: @white;
     text-transform: uppercase;
     position: absolute;
-    top: 57px;
-    right: 20px;
+    top: 54px;
+    right: 130px;
     box-sizing: border-box;
     text-align: center;
     padding-top: 12px;

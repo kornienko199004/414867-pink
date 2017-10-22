@@ -30,7 +30,7 @@
   text-align: center;
 
   @media (min-width: @table-width) {
-    width: 410px;
+    width: 440px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -50,11 +50,11 @@
 
   @media (min-width: @table-width) {
     width: 204px;
-    min-height: 44px;
   }
 
   @media (min-width: @desktop-width) {
     width: 290px;
+    min-height: 44px;
   }
 }
 
@@ -79,8 +79,8 @@
 .photo-maker__range-toggler {
   display: block;
   box-sizing: border-box;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   top: 4px;
   right: 35px;
@@ -94,20 +94,45 @@
 }
 
 .photo-maker__range--cut {
-  & .photo-maker__range-toggler {
-    right: 10%;
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      right: 21%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 25%;
+    }
   }
 }
 
+
 .photo-maker__range--fill {
-  & .photo-maker__range-toggler {
-    left: 10%;
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      left: 12%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 250px;
+    }
   }
 }
 
 .photo-maker__range--smile {
-  & .photo-maker__range-toggler {
-    left: 40%;
+  @media (min-width: @table-width) {
+    & .photo-maker__range-toggler {
+      left: 47%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & .photo-maker__range-toggler {
+      left: 56%;
+    }
   }
 }
 
