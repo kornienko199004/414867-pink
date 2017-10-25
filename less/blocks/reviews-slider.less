@@ -126,38 +126,9 @@
     position: absolute;
     background-image: url("../img/icon-quotes.svg");
     background-repeat: no-repeat;
-    top: 70px;
+    top: -114px;
     left: 50%;
-    margin-left: -39px;
-    width: 79px;
-    height: 65px;
-  }
-}
-
-.reviews-slider__description::before {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon-review-arrow-left.svg");
-    background-repeat: no-repeat;
-    top: 28px;
-    left: -90px;
-    margin-left: -39px;
-    width: 79px;
-    height: 65px;
-  }
-}
-
-
-.reviews-slider__description::after {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon-review-arrow-right.svg");
-    background-repeat: no-repeat;
-    top: 28px;
-    right: -185px;
-    margin-left: -39px;
+    margin-left: -38px;
     width: 79px;
     height: 65px;
   }
@@ -252,4 +223,54 @@
 .reviews-slider__radio:hover ~ .reviews-slider__span::before,
 .reviews-slider__radio:focus ~ .reviews-slider__span::before {
   background-color: rgb(126, 134, 143);
+}
+
+.reviews-slider__slides {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.reviews-slider__arrow {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.reviews-slider__arrow-image {
+  fill: rgb(202, 206, 209);
+}
+
+.reviews-slider__arrow:hover .reviews-slider__arrow-image,
+.reviews-slider__arrow:focus .reviews-slider__arrow-image {
+  fill: @color;
+}
+
+.reviews-slider__arrow:active .reviews-slider__arrow-image {
+  fill: rgb(233, 235, 236);
+}
+
+.reviews-slider__arrow--left {
+  position: absolute;
+  left: -159px;
+  margin-top: -26px;
+  top: 50%;
+  width: 79px;
+  height: 65px;
+}
+
+.reviews-slider__arrow--right {
+  position: absolute;
+  right: -159px;
+  margin-top: -26px;
+  top: 50%;
+  width: 79px;
+  height: 65px;
 }
