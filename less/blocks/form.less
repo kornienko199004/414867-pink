@@ -13,7 +13,7 @@
 
   @media (min-width: @desktop-width) {
     box-sizing: border-box;
-    padding-top: 64px;
+    padding-top: 62px;
     padding-bottom: 0;
     width: 940px;
     display: flex;
@@ -90,20 +90,23 @@
 .form__input {
   box-sizing: border-box;
   width: 100%;
-  padding: 14px 24px 13px 17px;
+  .null-indents();
+  padding-right: 10px;
+  padding-left: 16px;
   border: 2px solid rgb(229, 229, 229);
   margin-bottom: 19px;
   color: @color;
+  font: inherit;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.67;
+  line-height: 30px;
+  height: 61px;
 
   &::placeholder {
     color: @color;
     font: inherit;
     font-size: 18px;
-    font-weight: 400;
-    line-height: 1.67;
+    line-height: 30px;
   }
 }
 
@@ -290,6 +293,8 @@
     width: 240px;
     text-align: center;
     line-height: 18px;
+    padding-top: 0;
+    padding-left: 15px;
   }
 }
 
@@ -305,6 +310,10 @@
   font: inherit;
   font-size: 18px;
   line-height: 30px;
+
+  &::placeholder {
+    color: @color;
+  }
 }
 
 .form__wrapper--textarea {
@@ -434,6 +443,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    padding-top: 2px;
   }
 }
 
@@ -548,6 +558,11 @@
     padding-right: 57px;
     display: flex;
     justify-content: space-between;
+
+    & .form__title {
+      width: 100%;
+      text-align: left;
+    }
   }
 
   .form__list {
@@ -594,6 +609,8 @@
   @media (min-width: @table-width) {
     width: 500px;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 17px;
   }
 
   @media (min-width: @desktop-width) {
